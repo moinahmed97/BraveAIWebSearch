@@ -1,6 +1,3 @@
-
-To create a README file, I'll include the following sections based on the files and dependencies found in your project:
-
 Project Overview: A brief description of what the project does.
 Installation: Instructions on how to set up the project locally.
 Usage: How to use the project.
