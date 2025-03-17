@@ -20,7 +20,7 @@ class Deps:
 # Create the web search agent
 web_search_agent = Agent(
     model='openai:gpt-4o',
-    system_prompt="Use the Brave API to perform web searches and return results succinctly please.",
+    system_prompt="Use the Brave API to perform web searches and return results succinctly plssssease.",
     deps_type=Deps,
     retries=2
 )
