@@ -37,7 +37,7 @@ async def perform_web_search(ctx: RunContext[Deps], query: str) -> List[Dict[str
         A list of search results.
     """
     if ctx.deps.brave_api_key is None:
-        raise ValueError("Brave API key is missing.")
+        raise ValueError("Your Brave API key is missing.")
 
     headers = {"Authorization": f"Bearer {ctx.deps.brave_api_key}"}
     search_url = f"https://api.brave.com/v1/search?q={query}"
