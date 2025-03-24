@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A powerful AI-powered web search tool built with Python. Leverages modern libraries to deliver efficient and intelligent search capabilities.
+A powerful AI-powered web search tool built with Python. Leverages modern libraries to deliver efficient and intelligent search capabilities using Pydantic AI and Brave API.
 
 ## Table of Contents
 - [Features](#features)
