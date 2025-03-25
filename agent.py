@@ -20,7 +20,7 @@ class Deps:
 # Create the web search agent
 web_search_agent = Agent(
     model='openai:gpt-4o',
-    system_prompt="Use the Brave API to perform web searches and return results succinctly plssssease.",
+    system_prompt="Use the Brave API to perform web searches and return results succinctly please.",
     deps_type=Deps,
     retries=2
 )
@@ -37,7 +37,7 @@ async def perform_web_search(ctx: RunContext[Deps], query: str) -> List[Dict[str
         A list of search results.
     """
     if ctx.deps.brave_api_key is None:
-        raise ValueError("Brave API key is missing.")
+        raise ValueError("Your Brave API key is missing.")
 
     headers = {"Authorization": f"Bearer {ctx.deps.brave_api_key}"}
     search_url = f"https://api.brave.com/v1/search?q={query}"
@@ -52,7 +52,7 @@ async def main():
         deps = Deps(client=client, brave_api_key=brave_api_key)
 
         # Example usage
-        results = await web_search_agent.run("What is the capital of France?", deps=deps)
+        results = await web_search_agent.run("What is the capital of Spain", deps=deps)
         print("Search Results:", results.data)
 
 if __name__ == "__main__":
